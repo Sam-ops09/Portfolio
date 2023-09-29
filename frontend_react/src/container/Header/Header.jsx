@@ -6,11 +6,13 @@ import ReactTypingEffect from 'react-typing-effect';
 
 const Header = () => {
   const [startTyping, setStartTyping] = useState(false);
-  // const []
 
   useEffect(() => {
-    setStartTyping(true);
+    setTimeout(() => {
+      setStartTyping(true);
+    }, 0); // Adjust the delay as needed
   }, []);
+  
 
   return (
     <div className="app__header app__flex">
@@ -22,7 +24,7 @@ const Header = () => {
               <ReactTypingEffect
                 className='head-text title-text'
                 text={["FullStack Web Developer", "Machine learning and artificial intelligence enthusiast", "Guitarist"]}
-                speed={15}
+                speed={10}
                 eraseSpeed={15}
                 cursorRenderer={cursor => <p>{cursor}</p>}
               />
